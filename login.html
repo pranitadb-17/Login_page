@@ -1,0 +1,107 @@
+<!-- <div class="container">
+    <form action="my.php" method="post">
+        <div id="div_login">
+            <h1>Login</h1>
+            <div>
+<input type="text" class="textbox" id="txt_uname" name="txt_uname" placeholder="Username" />
+            </div>
+            <div>
+<input type="password" class="textbox" id="txt_uname" name="txt_pwd" placeholder="Password"/>
+            </div>
+            <div>
+<input type="submit" value="Submit" name="but_submit" id="but_submit" />
+            </div>
+        </div>
+    </form>
+</div> -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Login Form in PHP</title>
+</head>
+<body>
+    
+<div class="container">
+    <form action="my.php" method="post">
+<div id="div_login" style="
+    height: 350px;
+    width: 400px;
+    text-align: center;
+    background-color: lightblue;
+    margin: 0 auto;
+    margin-top: 200px;
+">
+            <h1 style="
+
+    padding: 20px;
+
+">Login</h1>
+            <div>
+<input type="text" class="textbox" id="txt_uname" name="txt_uname" placeholder="    Enter Username" style="
+    height: 30px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+">
+            </div>
+            <div>
+<input type="password" class="textbox" id="txt_uname" name="txt_pwd" placeholder="    Enter Password" style="
+    height: 30px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+">
+            </div>
+            <div>
+<input type="submit" value="Submit" name="but_submit" id="but_submit" style="
+    height: 30px;
+    background-color: limegreen;
+    border-radius: 10px;
+    width: 70px;
+">
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- <?php
+session_start();
+$host = "localhost"; 
+$user = "root"; 
+$password = ""; 
+$dbname = "user_login"; 
+$con = mysqli_connect($host, $user, $password, $dbname);
+if (!$con) {
+ die("Connection failed: " . mysqli_connect_error());
+}
+
+if(isset($_POST['but_submit'])){
+
+    $uname = mysqli_real_escape_string($con,$_POST['txt_uname']);
+    $password = mysqli_real_escape_string($con,$_POST['txt_pwd']);
+    
+        if ($uname != "" && $password != ""){
+    
+     $sql_query = "select count(*) as cntUser from user_details where username='".$uname."' and password='".$password."'";
+            $result = mysqli_query($con,$sql_query);
+            $row = mysqli_fetch_array($result);
+            $count = $row['cntUser'];
+            if($count > 0){
+    
+          echo "  Hello ",$uname;
+          echo "<br>";
+          echo "\n Welcome to PCCOER Dashboard !!!";
+            //  header(" Location:login.html");
+              }
+              else{
+                echo nl2br("  Invalid username and password. \r\n Please enter correct credentials.");
+            }
+    
+        }
+    
+    }
+
+
+?> -->
+
+
+</body>
+</html>
